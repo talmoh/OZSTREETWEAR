@@ -1,0 +1,224 @@
+/* Variables CSS */
+:root {
+  --primary-color: #007bff; /* Couleur principale */
+  --secondary-color: #6c757d; /* Couleur secondaire */
+  --dark-color: #000000; /* Couleur sombre */
+  --light-color: #f8f9fa; /* Couleur claire */
+  --white-color: #ffffff; /* Blanc */
+  --border-color: #ccc; /* Couleur de bordure */
+  --font-size-base: 16px; /* Taille de police de base */
+  --font-size-lg: 20px; /* Taille de police grande */
+  --font-size-sm: 14px; /* Taille de police petite */
+}
+
+/* Style du conteneur du formulaire */
+.form-container {
+  height: 100%; /* Prend toute la hauteur de la colonne */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le contenu verticalement */
+  padding: 20px; /* Espacement intérieur */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff; /* Fond blanc */
+}
+/* Style de l'image produit */
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Style pour les tailles */
+.product-swatch {
+  margin-bottom: 10px;
+}
+
+.product-swatch .btn {
+  margin-right: 5px;
+  border: 1px solid var(--border-color);
+}
+
+.product-swatch .btn:hover {
+  background-color: var(--light-color);
+}
+
+/* Style pour le bouton "Ajouter au panier" */
+.btn-addtocart {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+}
+
+.btn-addtocart:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Style pour le bouton +- quantité */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.qty-btn {
+  background-color: var(--light-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  border-radius: 5px;
+}
+
+.qty-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.quantity {
+  width: 50px;
+  border: none;
+  text-align: center;
+  font-size: var(--font-size-base);
+  margin: 0 10px;
+}
+/* Carrousel */
+/* Style du carrousel */
+.swiper {
+  width: 100%;
+  height: 500px; /* Hauteur fixe pour le carrousel */
+  margin-top: 30%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Couleur de fond pour les slides */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Couvre tout l'espace sans déformer l'image */
+  object-position: center; /* Centre l'image */
+  border-radius: 10px;
+}
+
+/* Style de la pagination */
+.swiper-pagination-bullet {
+  background-color: #fff; /* Couleur des points */
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color); /* Couleur du point actif */
+  opacity: 1;
+}
+
+/* Style des boutons de navigation */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--primary-color); /* Couleur des flèches */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond des flèches */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 1); /* Fond des flèches au survol */
+}
+/* Carrousel */
+/*---------------------------------------
+  SITE FOOTER               
+-----------------------------------------*/
+.site-footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding: 4.5rem 10% 2.5rem;
+}
+
+.site-footer .custom-link {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: var(--font-size-base);
+  text-decoration: none;
+}
+
+.site-footer .custom-link:hover {
+  color: var(--white-color);
+}
+
+.copyright-text {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: var(--font-size-sm);
+}
+
+/*---------------------------------------
+  SOCIAL ICON               
+-----------------------------------------*/
+.social-icon {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-icon li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.social-icon-link {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: var(--font-size-lg);
+  text-decoration: none;
+}
+
+.social-icon-link:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .btn-addtocart {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .quantity-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .qty-btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .site-footer {
+    padding: 2rem 5%;
+  }
+}

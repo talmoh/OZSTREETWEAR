@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "name": "Chemise Élégante",
+      "description": "Chemise en coton de haute qualité, coupe ajustée.",
+      "price": 39.99,
+      "image": "images/chemise1.jpg",
+      "category": "chemises",
+      "images": ["chemise1.jpg", "images/chemise2.jpg", "images/chemise3.jpg"]
+    },
+    {
+      "id": 2,
+      "name": "Pantalon Chino",
+      "description": "Pantalon confortable et polyvalent, idéal pour toutes les occasions.",
+      "price": 49.99,
+      "image": "images/pantalon.jpg",
+      "category": "pantalons",
+      "images": ["pantalon1.jpg", "pantalon2.jpg"]
+    },
+      {
+      "id": 3,
+      "name": "Veste en Cuir",
+      "description": "Veste en cuir véritable, style motard.",
+      "price": 129.99,
+      "image": "images/veste.jpg",
+      "image1": "images/veste2.jpg",
+      "image2": "images/veste3.jpg",
+      "category": "vestes",
+      "images": ["images/veste.jpg", "images/veste2.jpg", "images/veste3.jpg"]
+    },
+    {
+      "id": 4,
+      "name": "Chaussures de Sport",
+      "description": "Chaussures confortables pour le sport et la vie quotidienne.",
+      "price": 79.99,
+      "image": "images/chaussures.jpg",
+      "category": "chaussures",
+      "images": ["chaussures1.jpg", "chaussures2.jpg"]
+    },
+    {
+      "id": 5,
+      "name": "Chaussures d'hiver'",
+      "description": "Chaussures confortables pour l'hiver'.",
+      "price": 79.99,
+      "image": "images/chaussures.jpg",
+      "category": "chaussures",
+      "images": ["chaussures.jpg", "chaussures2.jpg"]
+    },
+    {
+      "id": 6,
+      "name": "Pull",
+      "description": "Pull en coton de haute qualité, coupe ajustée.",
+      "price": 150.00,
+      "image": "images/pull.jpeg",
+      "image1": "images/pull2.jpeg",
+      "image2": "images/pull3.jpeg",
+      "category": "chemises",
+      "images": ["chemise1.jpg", "images/chemise2.jpg", "images/chemise3.jpg"]
+    },
+    {
+      "id": 7,
+      "name": "Pull",
+      "description": "Pull en coton de haute qualité, coupe ajustée.",
+      "price": 150.00,
+      "image": "images/pull.jpeg",
+      "image1": "images/pull2.jpeg",
+      "image2": "images/pull3.jpeg",
+      "category": "chemises",
+      "images": ["chemise1.jpg", "images/chemise2.jpg", "images/chemise3.jpg"]
+    },
+    {
+      "id": 8,
+      "name": "Pull",
+      "description": "Pull en coton de haute qualité, coupe ajustée.",
+      "price": 150.00,
+      "image": "images/pull.jpeg",
+      "image1": "images/pull2.jpeg",
+      "image2": "images/pull3.jpeg",
+      "category": "chemises",
+      "images": ["chemise1.jpg", "images/chemise2.jpg", "images/chemise3.jpg"]
+    },
+    {
+      "id": 9,
+      "name": "Pull",
+      "description": "Pull en coton de haute qualité, coupe ajustée.",
+      "price": 150.00,
+      "image": "images/pull.jpeg",
+      "image1": "images/pull2.jpeg",
+      "image2": "images/pull3.jpeg",
+      "category": "chemises",
+      "images": ["chemise1.jpg", "images/chemise2.jpg", "images/chemise3.jpg"]
+    }
+  ]

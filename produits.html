@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pantalon - Zino Street Wear</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&family=Allura&family=Courgette&display=swap" rel="stylesheet">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="form.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.PNG" width="80" height="80" alt="Logo Zino Street Wear">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/">Page FB</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Catégories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Nouveautés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" id="cart-link" class="nav-link"><i class="fa-solid fa-cart-shopping"></i> (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <div class="row">
+            <!-- Product Image -->
+       <!-- Section de l'image du produit -->
+            <div class="col-md-6">
+              <div class="swiper">
+                  <!-- Conteneur du carrousel -->
+                  <div class="swiper-wrapper">
+                      <!-- Slide 1 -->
+                      <div class="swiper-slide">
+                          <img src="" id="productImage" alt="Image du produit" class="img-fluid">
+                      </div>
+                      <!-- Slide 2 -->
+                      <div class="swiper-slide">
+                          <img src="" id="productImage1" alt="Image du produit" class="img-fluid">
+                      </div>
+                      <!-- Slide 3 -->
+                      <div class="swiper-slide">
+                          <img src="" id="productImage2" alt="Image du produit" class="img-fluid">
+                      </div>
+                  </div>
+
+                  <!-- Pagination (points indicateurs) -->
+                  <div class="swiper-pagination"></div>
+
+                  <!-- Boutons de navigation (flèches) -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h2 id="product-name"></h2>
+                <p id="productPrice" class="h4 text-danger"></p>
+                <p id="productDescription"></p>
+
+                <!-- Product Form -->
+                <!-- <form id="formProduit" action="https://qldshoes.com/order" method="POST">
+                    <input type="hidden" name="_token" value="BS3nu4u6AMqhJnbsfRGwAgSVjQXphD24TNT1QLwB" autocomplete="off"> -->
+
+                    <!-- Size Selection -->
+                    <div class="product-single__swatches mb-4">
+                        <label class="form-label">Tailles</label>
+                        <div class="d-flex gap-2">
+                            <input type="radio" name="size" id="size-2" value="S" class="btn-check">
+                            <label class="btn btn-outline-primary" for="size-2">S</label>
+                            <input type="radio" name="size" id="size-3" value="M" class="btn-check">
+                            <label class="btn btn-outline-primary" for="size-3">M</label>
+                            <input type="radio" name="size" id="size-5" value="XL" class="btn-check">
+                            <label class="btn btn-outline-primary" for="size-5">XL</label>
+                            <input type="radio" name="size" id="size-6" value="XXL" class="btn-check">
+                            <label class="btn btn-outline-primary" for="size-6">XXL</label>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-container mb-4">Quantité
+                        <button class="btn btn-outline-secondary" id="min">-</button>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control text-center" style="width: 60px;">
+                        <button class="btn btn-outline-secondary" id="plus">+</button>
+                    </div>
+
+                    <!-- Customer Information -->
+                    <div class="card p-4 mb-4">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input name="name" type="text" class="form-control" placeholder="Nom*" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input name="lastname" type="text" class="form-control" placeholder="Prénom*" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input name="phone" type="number" class="form-control" placeholder="N°téléphone*" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control" name="wilaya_id" id="wilaya" required>
+                                <option value="" disabled selected>Wilaya</option>
+                                <option value="1" cost="1050" wilaya-id="1">1 - Adrar</option>
+                                              <option value="2" cost="600" wilaya-id="2">2 - Chlef</option>
+                                              <option value="3" cost="600" wilaya-id="3">3 - Laghouat</option>
+                                              <option value="4" cost="600" wilaya-id="4">4 - Oum El Bouaghi</option>
+                                              <option value="5" cost="600" wilaya-id="5">5 - Batna</option>
+                                              <option value="6" cost="600" wilaya-id="6">6 - Béjaïa</option>
+                                              <option value="7" cost="750" wilaya-id="7">7 - Biskra</option>
+                                              <option value="8" cost="750" wilaya-id="8">8 - Béchar</option>
+                                              <option value="9" cost="450" wilaya-id="9">9 - Blida</option>
+                                              <option value="10" cost="600" wilaya-id="10">10 - Bouira</option>
+                                              <option value="11" cost="1250" wilaya-id="11">11 - Tamanrasset</option>
+                                              <option value="12" cost="750" wilaya-id="12">12 - Tébessa</option>
+                                              <option value="13" cost="600" wilaya-id="13">13 - Tlemcen</option>
+                                              <option value="14" cost="600" wilaya-id="14">14 - Tiaret</option>
+                                              <option value="15" cost="600" wilaya-id="15">15 - Tizi Ouzou</option>
+                                              <option value="16" cost="400" wilaya-id="16">16 - Alger</option>
+                                              <option value="17" cost="750" wilaya-id="17">17 - Djelfa</option>
+                                              <option value="18" cost="600" wilaya-id="18">18 - Jijel</option>
+                                              <option value="19" cost="600" wilaya-id="19">19 - Sétif</option>
+                                              <option value="20" cost="600" wilaya-id="20">20 - Saïda</option>
+                                              <option value="21" cost="600" wilaya-id="21">21 - Skikda</option>
+                                              <option value="22" cost="600" wilaya-id="22">22 - Sidi Bel Abbès</option>
+                                              <option value="23" cost="600" wilaya-id="23">23 - Annaba</option>
+                                              <option value="24" cost="600" wilaya-id="24">24 - Guelma</option>
+                                              <option value="25" cost="600" wilaya-id="25">25 - Constantine</option>
+                                              <option value="26" cost="600" wilaya-id="26">26 - Médéa</option>
+                                              <option value="27" cost="600" wilaya-id="27">27 - Mostaganem</option>
+                                              <option value="28" cost="600" wilaya-id="28">28 - M'Sila</option>
+                                              <option value="29" cost="600" wilaya-id="29">29 - Mascara</option>
+                                              <option value="30" cost="750" wilaya-id="30">30 - Ouargla</option>
+                                              <option value="31" cost="600" wilaya-id="31">31 - Oran</option>
+                                              <option value="32" cost="1050" wilaya-id="32">32 - El Bayadh</option>
+                                              <option value="33" cost="1250" wilaya-id="33">33 - Illizi</option>
+                                              <option value="34" cost="600" wilaya-id="34">34 - Bordj Bou Arreridj</option>
+                                              <option value="35" cost="450" wilaya-id="35">35 - Boumerdès</option>
+                                              <option value="36" cost="600" wilaya-id="36">36 - El Tarf</option>
+                                              <option value="37" cost="1250" wilaya-id="37">37 - Tindouf</option>
+                                              <option value="38" cost="600" wilaya-id="38">38 - Tissemsilt</option>
+                                              <option value="39" cost="750" wilaya-id="39">39 - El Oued</option>
+                                              <option value="40" cost="600" wilaya-id="40">40 - Khenchela</option>
+                                              <option value="41" cost="600" wilaya-id="41">41 - Souk Ahras</option>
+                                              <option value="42" cost="600" wilaya-id="42">42 - Tipaza</option>
+                                              <option value="43" cost="600" wilaya-id="43">43 - Mila</option>
+                                              <option value="44" cost="600" wilaya-id="44">44 - Aïn Defla</option>
+                                              <option value="45" cost="1050" wilaya-id="45">45 - Naâma</option>
+                                              <option value="46" cost="600" wilaya-id="46">46 - Aïn Témouchent</option>
+                                              <option value="47" cost="750" wilaya-id="47">47 - Ghardaïa</option>
+                                              <option value="48" cost="600" wilaya-id="48">48 - Relizane</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control" name="commune" id="commune" required>
+                                <option value="" disabled selected>Commune</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="card p-4 mb-4">
+                        <h5>Résumé de commande</h5>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Produit</th>
+                                    <td id="product-price">0 DZD</td>
+                                </tr>
+                                <tr>
+                                    <th>Livraison</th>
+                                    <td id="delivery-cost">0 DZD</td>
+                                </tr>
+                                <tr>
+                                    <th>TOTAL</th>
+                                    <td id="total-price">0 DZD</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="orderBtn" class="btn btn-primary w-100" type="submit">Acheter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-white">
+                        <i class="bi-geo-alt-fill me-2"></i>
+                        Ouled-Fayet Alger
+                    </h5>
+                    <a href="mailto:zino@gmail.com" class="text-white">zino@gmail.com</a>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="mb-0">Copyright © ZINO STREET WEAR 2025</p>
+                    <p>Design By: <a href="#" class="text-white">TAL B2B SOLUTIONS</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="data.js"></script>
+</body>
+</html>
