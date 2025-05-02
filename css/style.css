@@ -173,4 +173,16 @@ footer{
   .site-footer {
     padding: 2rem 5%;
   }
+
+  .navbar-brand img {
+    width: 60px; /* Réduisez la taille du logo */
+  }
+
+  #productDetails img {
+    width: 100%; /* Adaptez les images des produits */
+  }
+
+  .card {
+    margin-bottom: 20px; /* Ajoutez de l'espace entre les cartes */
+  }
 }
